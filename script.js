@@ -57,10 +57,12 @@ function drawChart() {
 //   });
 // }
 
+
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(DrawBieChart);
 function DrawBieChart() {
 
-  // google.load("visualization", "1", {packages:["corechart"]});
-  //     google.setOnLoadCallback(drawChart);    
+     
 
 
       google.setOnLoadCallback(drawChart);
