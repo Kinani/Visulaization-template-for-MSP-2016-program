@@ -34,7 +34,7 @@ function drawMyChart(data_) {
                chart.draw(view, options);
 
 
-
+var view = new google.visualization.DataView(data_);
 					view.setColumns([2,3]);
 					var options = { 
 						title: "Male/Female" 
@@ -44,7 +44,7 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.PieChart(document.getElementById('PieChartMaleFemale')); 
 					chart.draw(view, options);
                     
- 
+ var view = new google.visualization.DataView(data_);
 					view.setColumns([4,5]);
 					var options = { 
 						title: "Specialization" 
@@ -54,6 +54,7 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.PieChart(document.getElementById('PieChartSpeci')); 
 					chart.draw(view, options);
 					
+					var view = new google.visualization.DataView(data_);
 			       view.setColumns([6,7]);
 					var options = { 
 						title: "Academic Degree" 
@@ -62,7 +63,7 @@ function drawMyChart(data_) {
 						
 					var chart = new google.visualization.PieChart(document.getElementById('PieChartDegree')); 
 					chart.draw(view, options);
-					
+				var view = new google.visualization.DataView(data_);var view = new google.visualization.DataView(data_);	
 					view.setColumns([8,9]);
 					var options = { 
 						title: "How did you hear about the MSP" 
@@ -72,6 +73,7 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.PieChart(document.getElementById('PieChartHowDidYouHear')); 
 					chart.draw(view, options);
 					
+				var view = new google.visualization.DataView(data_);	
 					view.setColumns([10,11]);
 					var options = { 
 						title: "English level" 
@@ -80,7 +82,7 @@ function drawMyChart(data_) {
 						
 					var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartEnglishLvl')); 
 					chart.draw(view, options);
-					
+				var view = new google.visualization.DataView(data_);	
 					view.setColumns([12,13]);
 					var options = { 
 						title: "Age" 
@@ -89,7 +91,7 @@ function drawMyChart(data_) {
 						
 					var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartAge')); 
 					chart.draw(view, options);
-					
+				var view = new google.visualization.DataView(data_);	
 					view.setColumns([14,15]);
 					var options = { 
 						title: "Expected Graduation Date" 
@@ -99,7 +101,7 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.LineChart(document.getElementById('LineChartExpecGradDate')); 
 					chart.draw(view, options);
 					
-					
+				var view = new google.visualization.DataView(data_);	
 					view.setColumns([16,17]);
 					var options = { 
 						title: "Cities"
@@ -110,7 +112,7 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.BarChart(document.getElementById('BarChartCity')); 
 					chart.draw(view, options);
 					
-					
+				var view = new google.visualization.DataView(data_);	
 					view.setColumns([18,19]);
 					var options = { 
 						title: "Universities"
@@ -121,6 +123,8 @@ function drawMyChart(data_) {
 					var chart = new google.visualization.BarChart(document.getElementById('BarChartUni')); 
 					chart.draw(view, options);
 					
+					
+			var view = new google.visualization.DataView(data_);		
 					view.setColumns([20,21]);
 					var options = { 
 						title: "Faculties"
