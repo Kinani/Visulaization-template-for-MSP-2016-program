@@ -5,29 +5,24 @@
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(load_page_data);
 
+
+
 function load_page_data(){
     
-    $.ajax({
-        data_: $.get("mydata.csv", function(csvString) {
+    $.get("mydata.csv", function(csvString) {
 	     // transform the CSV string into a 2-dimensional array 
 		 var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 		 // this new DataTable object holds all the data 
 		 data_ = new google.visualization.arrayToDataTable(arrayData);
+		 drawMyChart(data_);
          
-         }),
-        async: false,
-        success: function(data_){
-            if(data_){
-                
-                drawChart(data_);
-            }
-        },
-    });
-      
+         });
 }
 
-function drawChart(data_) {
-    var view = new google.visualization.DataView(data_); 
+
+function drawMyChart(data_) {
+	
+	        var view = new google.visualization.DataView(data_); 
 	
 	
 					view.setColumns([0,1]);
@@ -136,5 +131,7 @@ function drawChart(data_) {
 					var chart = new google.visualization.BarChart(document.getElementById('BarChartFaculty')); 
 					chart.draw(view, options);
 					
+    
 					
 }
+
